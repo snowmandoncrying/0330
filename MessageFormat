@@ -1,1 +1,26 @@
 매개변수화 된 문자열 형식 클래스 (MessageFormat)
+
+package format.example01;
+
+import java.text.MessageFormat;
+import javax.swing.JOptionPane;
+
+public class MessageFormatExample {
+
+	public static void main(String[] args) {
+
+		String id = JOptionPane.showInputDialog("아이디를 입력하세요.");
+		String name = JOptionPane.showInputDialog("이름을 입력하세요");
+		String phone = JOptionPane.showInputDialog("전화번호를 입력하세요.");
+		
+		String text = "아이디: (0) \n 이름: (1) \n 전화번호: (2)";
+		String result = MessageFormat.format(text, id, name, phone);
+		System.out.println(result);
+	}
+}
+
+출력 누르면 입력창이 뜬다. 
+완료되면 
+아이디: (0) 
+ 이름: (1) 
+ 전화번호: (2) 순서대로 나옴.
