@@ -24,3 +24,52 @@ public class MessageFormatExample {
 아이디: (0) 
  이름: (1) 
  전화번호: (2) 순서대로 나옴.
+--------------------------------------------------
+
+package format.example01;
+
+import java.util.Scanner;
+import java.text.MessageFormat;
+
+public class MessageFormatExample02 {
+
+	public static void main(String[] args) {
+		// 미리 정의된 값
+		String id = "babyblue";
+		String name = "웬디";
+		String phone = "010-1234-5882";
+		System.out.println("아이디: " + id + "\n이름: " + name + "\n전화번호: " + phone); 	// 지금까지 써온 방식
+		// MessageFormat을 사용하여 포맷팅된 문자열 생성
+		String text = "아이디: (0) \n 이름: (1) \n  전화번호: (2)";
+		String result = MessageFormat.format(text, id, name, phone);
+		System.out.println(result);
+		// 새로운 값으로 포맷팅된 문자열 생성
+		String result1 = MessageFormat.format(text, "babypink", "카리나", "010-2345-6789");	// 그냥 여기에 입력해도 상관은 없음
+		System.out.println(result1);
+		// 사용자로부터 입력받기
+		Scanner scanner = new Scanner(System.in);
+		// 스캐너를 사용하여 아이디, 이름, 전화번호 입력받기
+		String id1 = scanner.nextLine();
+		System.out.println("아이디를 입력하세요.");
+		String name1 = scanner.nextLine();
+		System.out.println("이름을 입력하세요.");
+		String phone1 = scanner.nextLine();
+		System.out.println("전화번호를 입력하세요.");
+		//  사용자 입력 값으로 포맷팅된 문자열 생성
+		String result2 = MessageFormat.format(text, id, name, phone);
+		System.out.println(result2);
+	}
+}
+
+출력
+아이디: babyblue
+이름: 웬디
+전화번호: 010-1234-5882
+아이디: (0) 
+ 이름: (1) 
+  전화번호: (2)
+아이디: (0) 
+ 이름: (1) 
+  전화번호: (2)
+여기에 값을 입력하면 됨.
+
