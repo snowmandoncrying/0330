@@ -3,3 +3,31 @@ Format 클래스의 종류는 세 가지가 있는데 숫자 형식, 날짜 형�
 
 숫자 형식 클래스 (DecimalFormat)
 적용할 패턴을 선택해 생성자 매개값으로 지정 후 객체를 생성한다.
+
+package format.example01;
+import java.text.DecimalFormat;
+public class DecimalFormatExample {
+
+	public static void main(String[] args) {
+		
+		double num = 1234567.89;
+		
+		DecimalFormat df = new DecimalFormat("0");
+		System.out.println(df.format(num));	// 소수점 없이 반올림되어 출력
+		
+		df = new DecimalFormat("00000000.00000");
+		System.out.println(df.format(num)); // 부족한 부분을 0으로 채워줌
+		
+		df = new DecimalFormat("########.#####");
+		System.out.println(df.format(num)); 
+		
+		df = new DecimalFormat("#,###");
+		System.out.println(df.format(num)); // 세 자리마다 소수점 표시
+	}
+}
+
+출력
+1234568
+01234567.89000
+1234567.89
+1,234,568
