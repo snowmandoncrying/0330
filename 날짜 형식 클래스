@@ -1,0 +1,42 @@
+날짜 형식 클래스 (SimpleDateFormat)
+
+package format.example01;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+public class SimpleDateFormatExample {
+
+	public static void main(String[] args) {
+		
+		Date day = new Date();
+		
+		SimpleDateFormat sdf1 = new SimpleDateFormat("1) yyyy-MM-dd");
+		System.out.println(sdf1.format(day));
+		
+		SimpleDateFormat sdf2 = new SimpleDateFormat("2) yyyy년 MM월 dd일");
+		System.out.println(sdf2.format(day));
+		
+		SimpleDateFormat sdf3 = new SimpleDateFormat("3) 오늘은 E요일 입니다.");
+		System.out.println(sdf3.format(day));
+		
+		SimpleDateFormat sdf4 = new SimpleDateFormat("4) 오늘은 올해의 D번째 날입니다.");
+		System.out.println(sdf4.format(day));
+		
+		SimpleDateFormat sdf5 = new SimpleDateFormat("5) 오늘은 올해의 d번째 날입니다.");
+		System.out.println(sdf5.format(day));
+		
+		SimpleDateFormat sdf6 = new SimpleDateFormat("6) 오늘은 2024년의 w번째 주 입니다.");
+		System.out.println(sdf6.format(day));	 
+		
+		SimpleDateFormat sdf7 = new SimpleDateFormat("7) 오늘은 3월의 W번째 주 입니다.");
+		System.out.println(sdf7.format(day));
+	}
+}
+
+출력
+1) 2024-03-30
+2) 2024년 03월 30일
+3) 오늘은 토요일 입니다.
+4) 오늘은 올해의 90번째 날입니다.
+5) 오늘은 올해의 30번째 날입니다.
+6) 오늘은 2024년의 13번째 주 입니다.
+7) 오늘은 3월의 5번째 주 입니다.
