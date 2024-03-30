@@ -1,0 +1,13 @@
+@ java.time 패키지
+  자바 8부터 추가된 패키지로
+  날짜와 시간을 나타내는 여러 가지 API가 새롭게 추가
+  날짜와 시간을 조작하거나 비교하는 기능 추가
+    Date와 Calnedar는 날짜와 시간을 조작하거나 비교하는 기능이 불충분하다. 그래서 이를 보완하기 위해 생성되었다.
+
+    java.time : 날짜와 시간을 나타내는 핵심 API인 LocalDate, LocalTime, LocalDateTime, ZonedDateTime 을 포함 / ISO-8601 에 정의된 달력 시스템에 기초함.
+    java.time.chrono : ISP-8601에 정의된 달력 시스템 이외에 다른 달력 시스템을 사용하고자 할 때 쓰는 API
+    java.time.format : 날짜와 시간을 파싱하고 포맷팅하는 API
+    java.time.temporal : 날짜와 시간을 연산하기 위한 보조 API
+    java.time.zone : 타임존을 지원하는 API
+
+    
