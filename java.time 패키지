@@ -10,7 +10,7 @@
     java.time.temporal : 날짜와 시간을 연산하기 위한 보조 API
     java.time.zone : 타임존을 지원하는 API
 
-     날짜와 시간을 표현하는 5개의 클래스
+  @ 날짜와 시간을 표현하는 5개의 클래스
 LocalDate : 로컬 날짜 클래스 , LocalTime : 로컬 시간 클래스, LocalDataTime : 로컬 날짜 및 시간 클래스
 ZonedDateTime : 특정 타임존의 날짜와 시간 클래스, Instant : 특정 시점의 Time-Stamp 클래스
 
@@ -19,3 +19,16 @@ isLeapYear()는 toLocalDate() 메소드로 LocalDate로 변환 후 사용해야�
 ZonedDateTime에서 제공하는 추가 메소드로 ZoneId와 ZoneOffset이 있다.
 ZoneId의 매개변수는 getZone()이며 존아이디를 리턴한다. 예시) Asia / Seoul
 ZoneOffset의 매개변수는 getOffset()이며 존오프셋을 리턴한다. (시차)
+
+  @ 날짜와 시간 조작하기
+빼기 - minus + 변수 (long)  // 예시) minusYears(long) - 년 뺴기
+더하기 - plus + 변수 (long)
+변경하기 - with(TemporalAdjuster adjuster) - 현재 날짜를 기준으로 상대적 날짜 리턴
+
+  @ Perioud 와 Duration
+Period: 년, 달, 일의 양을 나타내는 날짜 기준 클래스 (리턴타입: int / getYears() - 년의 차이/ getMonths() - 달의 차이/ getDays() - 일의 차이)
+Duration: 시, 분, 초, 나노초의 양을 나타내는 시간 기준 클래스 (리턴타입: int / getSeconds() - 초의 차이/ getNano() - 나노초의 차이)
+
+  @ 파싱과 포맷팅
+파싱: 주어진 문자열로 날짜와 시간을 생성
+포맷팅: 날짜와 시간을 형식화된 문자열로 변환
