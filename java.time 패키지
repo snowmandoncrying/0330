@@ -10,4 +10,12 @@
     java.time.temporal : 날짜와 시간을 연산하기 위한 보조 API
     java.time.zone : 타임존을 지원하는 API
 
-    
+     날짜와 시간을 표현하는 5개의 클래스
+LocalDate : 로컬 날짜 클래스 , LocalTime : 로컬 시간 클래스, LocalDataTime : 로컬 날짜 및 시간 클래스
+ZonedDateTime : 특정 타임존의 날짜와 시간 클래스, Instant : 특정 시점의 Time-Stamp 클래스
+
+isLeapYear()는 toLocalDate() 메소드로 LocalDate로 변환 후 사용해야한다.
+
+ZonedDateTime에서 제공하는 추가 메소드로 ZoneId와 ZoneOffset이 있다.
+ZoneId의 매개변수는 getZone()이며 존아이디를 리턴한다. 예시) Asia / Seoul
+ZoneOffset의 매개변수는 getOffset()이며 존오프셋을 리턴한다. (시차)
